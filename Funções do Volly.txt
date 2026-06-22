@@ -1,0 +1,13 @@
+* Feed/VollyConnect(mural) - Nossa rede social exclusiva que engloba todas as instituições que utilizam o app
+* Nosso proximo compromisso - diz quando sera o proximo evento da sua instituição
+* musicas para se inspirar - sugestão de musicas que estão sendo mais tocadas
+* Feed/Escalas - exibi a escala geral dos eventos da sua instituição
+* feed/notificações - botão de notificações interativo
+* feed/chat - botão flutuante de atalho para o chat do evento
+* Gestão de equipe - sessão de gerenciamento de equipes, funções e voluntarios
+* Eventos - Criação, informação de eventos como data, hora e escala, repertorio, manutenção de escala do evento
+* Escalas - disponibilidade (diga qual evento estara disponivel)
+               - escalas (gerar escalas com apenas um toque e notifique os seus voluntarios)
+               - Escala mensal (visualize a escala de sua equipe e compartilhe com sua equipe)
+* playlist - tenha uma lista completa das musicas que estão mais sendo tocadas
+* perfil - veja a qual equipes vc faz parte, confira suas notificações, ative suas notificações,

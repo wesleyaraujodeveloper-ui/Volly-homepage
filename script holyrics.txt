@@ -1,0 +1,58 @@
+function request(action, headers, content, info) {
+    if (action === 'playlist/add') {
+        try {
+            var data = content;
+            var itemsList = data.items;
+            var totalItems = (itemsList.length !== undefined) ? itemsList.length : itemsList.size();
+            
+            h.log("Recebendo " + totalItems + " músicas do Volly...");
+            
+            // Busca TODAS as músicas de uma vez só para não depender dos filtros do Holyrics
+            var result = h.hly('GetSongs', {});
+            var allSongs = result.data ? result.data : result;
+            var totalDb = (allSongs && allSongs.length !== undefined) ? allSongs.length : ((allSongs && allSongs.size) ? allSongs.size() : 0);
+            
+            var sucessoCount = 0;
+            
+            // Passa por cada música da playlist
+            for (var i = 0; i < totalItems; i++) {
+                var song = itemsList[i] || (itemsList.get && itemsList.get(i));
+                
+                if (song && song.type === 'song' && song.title) {
+                    var targetTitle = song.title.toLowerCase().trim();
+                    var foundId = null;
+                    
+                    // Procura manualmente no banco inteiro (100% garantido de achar o título exato)
+                    for (var j = 0; j < totalDb; j++) {
+                        var dbSong = allSongs[j] || (allSongs.get && allSongs.get(j));
+                        if (dbSong && dbSong.title) {
+                            if (dbSong.title.toLowerCase().trim() === targetTitle) {
+                                foundId = dbSong.id;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (foundId) {
+                        h.hly('AddSongsToPlaylist', { id: foundId });
+                        h.log("✅ Adicionada: " + song.title);
+                        sucessoCount++;
+                    } else {
+                        h.log("❌ Não encontrada no banco: " + song.title);
+                    }
+                }
+            }
+            
+            return { 
+                status: 'ok', 
+                message: 'Sucesso! ' + sucessoCount + ' músicas adicionadas.' 
+            };
+            
+        } catch (e) {
+            h.log("Erro no script: " + e.toString());
+            return { status: 'error', message: e.toString() };
+        }
+    }
+    
+    return true;
+}

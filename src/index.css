@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Cream Cake';
+  src: url('/assets/fonts/CreamCake.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cream Cake';
+  src: url('/assets/fonts/Cream Cake Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@theme {
+  --color-volly-bg: #09090b;
+  --color-volly-surface: #18181b;
+  --color-volly-surface-high: #27272a;
+  --color-volly-primary: #DF721B;
+  --color-volly-secondary: #7C3AED; /* Purple */
+  --color-volly-accent: #2563EB; /* Blue */
+  --color-volly-border: #27272a;
+  --color-volly-text: #FAFAFA;
+  --color-volly-text-sec: #A1A1AA;
+  --color-volly-success: #10B981;
+  --color-volly-error: #EF4444;
+  
+  --shadow-volly-elevation: 0px 4px 5px rgba(0, 0, 0, 0.3);
+  --shadow-volly-fab: 0px 4px 8px rgba(223, 114, 27, 0.4);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-volly-bg);
+    color: var(--color-volly-text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
