@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
+import Tutorials from './components/Tutorials';
 import { TourDemo } from './TourDemo';
 import { VollyConnectorSection } from './components/VollyConnectorSection';
 import { FreeTrialSection } from './components/FreeTrialSection';
@@ -53,6 +54,8 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      
+      <Tutorials />
       
       {/* Tour Interativo Section */}
       <section className="py-24 bg-[#09090b] relative overflow-hidden border-t border-white/5">

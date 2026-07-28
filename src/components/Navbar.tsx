@@ -15,6 +15,7 @@ export function Navbar() {
           </div>
           <div className="hidden md:flex space-x-8">
             <a href="#funcionalidades" className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Funcionalidades</a>
+            <a href="#tutoriais" className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Tutoriais</a>
             <a href="#tour" className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Demonstração</a>
             <a href="#planos" className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Planos</a>
             <a href="#contato" className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Contato</a>

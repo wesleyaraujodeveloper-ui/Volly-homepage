@@ -59,7 +59,7 @@ export function VollyConnectorSection() {
               Baixar Volly Connector
             </a>
             <p className="text-zinc-500 text-sm mt-4 text-center sm:text-left">
-              Para Windows 10/11 • Versão 1.0 (16 MB)
+              Para Windows 10/11 • Versão 1.1 (C/ Conversor Integrado)
             </p>
           </div>
 
