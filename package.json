@@ -2,7 +2,7 @@
   "name": "volly-homepage",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "module",`r`n  "engines": {`r`n    "node": "22.x"`r`n  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -40,3 +40,4 @@
     "vite-plugin-pwa": "^1.3.0"
   }
 }
+
